@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AdressBookApp</title>
+    <link rel="stylesheet" href="./dist/style.css">
+    <link rel="stylesheet" href="./fontawesome-free-6.1.2-web/css/all.css">
+</head>
+<body class="min-h-[100vh] bg-[var(--light-gray-color)]">
+    
+    <!-- start form modal -->
+    <div id="fullscreen-div"></div>
+    <form class="modal" id="modal">
+        <div class="modal-content">
+            <div class="modal-head">
+                <h3 id="modal-title">Add Address</h3>
+                <button type="button" id="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+
+            <div class="modal-main">
+                <div class="modal-row">
+                    <div class="modal-col">
+                        <label for="">how should your mail be addressed</label>
+                        <input class="form-control" type="text" placeholder="E.G the Smith Family"
+                        name="addr_ing_name">
+                    </div>
+                </div>
+               <div class="grid-row">
+
+                <div class="modal-row grid-row">
+                    <div class="modal-col">
+                        <label for="">First Name</label>
+                        <input class="form-control" type="text" placeholder="the first name"
+                        name="first_name">
+                    </div>
+                </div>
+                <div class="modal-row grid-row">
+                    <div class="modal-col">
+                        <label for="">last Name</label>
+                        <input class="form-control" type="text" placeholder="the last name"
+                        name="last_name">
+                    </div>
+                </div>
+                <div class="modal-row grid-row">
+                    <div class="modal-col">
+                        <label for="">Email</label>
+                        <input class="form-control" type="email" placeholder="the Email"
+                        name="email">
+                    </div>
+                </div>
+                <div class="modal-row grid-row">
+                    <div class="modal-col">
+                        <label for="">Phone</label>
+                        <input class="form-control" type="text" placeholder="the Phone"
+                        name="phone">
+                    </div>
+                </div>
+                <div class="modal-row grid-row">
+                    <div class="modal-col">
+                        <label for="">Street Address</label>
+                        <input class="form-control" type="text" placeholder="street Address"
+                        name="street_addr">
+                    </div>
+                </div>
+                <div class="modal-row grid-row">
+                    <div class="modal-col">
+                        <label for="">Postal Code</label>
+                        <input class="form-control" type="text" placeholder="60326"
+                        name="postal_code">
+                    </div>
+                </div>
+                <div class="modal-row grid-row">
+                    <div class="modal-col">
+                        <label for="">City</label>
+                        <input class="form-control" type="text" placeholder="City Name"
+                        name="city">
+                    </div>
+                </div>
+                <div class="modal-row grid-row">
+                    <div class="modal-col">
+                        <label for="">Country</label>
+                        <select name="country" id="country-list">
+                            <option value="USA">USA</option>
+                        </select>
+                    </div>
+                </div>
+
+                
+
+               </div>
+               <div class="modal-row">
+                <div class="modal-col">
+                    <label for="">labels</label>
+                    <select name="labels">
+                        <option value="Family">Family</option>
+                        <option value="Friends">Friends</option>
+                        <option value="Colleaguse">Colleaguse</option>
+                    </select>
+                </div>
+
+            </div>
+               <div class="modal-row mt-4" id="modal-btns">
+                <button type="submit" id="save-btn">Save</button>
+
+            </div>
+
+            </div>
+
+        </div>
+
+    </form>
+    <!-- end form modal -->
+
+    <!-- start addressBook Home -->
+
+    <div class="addr-book" id="addr-book">
+        <div class="addr-book-content">
+            <div class="addr-book-head">
+              <i class="fa-solid fa-address-book fa-2x"></i>
+              <h2>Address<span>Book</span></h2>
+            </div>
+            <div class="addr-book-top">
+                <button type="button" class="btn" id="add-btn">
+                    <span><i class="fas fa-plus"></i>Add Address</span>
+                </button>
+            </div>
+
+            <div class="addr-book-list" id="addr-book-list">
+                <table class="addr-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Address</th>
+                            <th>Labels</th>
+                            <th>By Name</th>
+                            <th>Phone</th>
+                        </tr>
+                    </thead>
+
+                    <tbody>
+                        <!-- <tr>
+                            <td>1</td>
+                            <td>
+                                <span class="addressing-name">
+                                  Smith Family
+                                </span><br><span class="address">Johnson Street - 5668 - Lake</span>
+                            </td>
+                            <td><span>Colleagus</span></td>
+                            <td>Mark Smith</td>
+                            <td>123-456-789</td>
+                        </tr> -->
+                     
+                    </tbody>
+
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- end of addressBook Home -->
+
+
+    
+    <script src="script.js"></script>
+</body>
+</html>
